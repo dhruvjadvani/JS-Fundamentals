@@ -1,1 +1,34 @@
+What is the Web?
+Have you ever wondered what images will appear in the heads of future generations when it comes to the era in which we live now? 
+It is likely that the 21st century will spark associations with the advent of the Internet and the World Wide Web. 
+Their creation caused major changes not only in the military and science structures but also in the lives of ordinary people,
+giving us opportunities that previously could only be imagined.
+
+You so often hear phrases like "The World Wide Web has engulfed our planet",
+that the definition of the Web is naturally pre-assumed and taken for granted. But really, what is this Web and why is it so global?
+
+The World Wide Web is a collection of information resources scattered around the world and linked together by reference.
+Sometimes this term is shortened to WWW, W3 or simply Web.
+
+
+The Web is also sometimes ironically called Wild Wild Web by analogy with the movie title Wild Wild West: come to think of it, the resemblance is undeniable.
+
+A unit of hypertext data on the W3 is called a web page. A web page may contain text, media files, graphics and links to other pages.
+
+A group of Web pages that share a common content theme, design and links to each other is called a website. 
+Special programs — browsers — are used to download and browse these websites. Most popular browsers: Firefox, Chrome, Opera, Safari.
+
+
+
+The history of the Web
+The World Wide Web was created at the European Organization for Nuclear Energy (CERN). 
+The development of the internal computer network was carried out by the scientist Tim Berners-Lee.
+In 1989, he was the first to suggest the idea of an information management system that used links to consolidate documents across the network. 
+He and his colleagues created a prototype project and released it for presentation.
+The first few years of the web pages were purely text-based until the first NCSA Mosaic graphics browser was introduced in 1993.
+The event allowed the World Wide Web to transform itself from scientific research into a media outlet.
+
+
+Initially, the Internet only allowed users to search and read information.
+This period of time is conditionally referred to as Web 1.0 (1990-2000) to provide a general presentation of the ever-changing Internet environment.
 
