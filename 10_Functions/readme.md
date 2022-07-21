@@ -50,3 +50,31 @@ writeMessage(); // Find and book your ideal tour!
 ```
 The ability to call a function before its creation is due to the peculiarities of JS file processing by browsers: the browser first goes through the whole code, finds all functions and only then starts executing the code.
 
+# Parameters
+In the previous examples, we left the parameters unattended: let's get back to that.
+
+We can transfer any information inside the function using the parameters.
+
+Let's try to pass two arguments to the function: a and b.
+```
+function quotient(a, b) {
+  console.log(a / b);
+}
+
+quotient(10, 5); // 2
+quotient(6, 2);  // 3
+```
+We called the function by passing the values that were copied into variables a and b, and used in the function body.
+
+# Returning a value
+In JS, it is possible to return the function result using the return statement:
+```
+function multiply(a, b) {
+  return a * b;
+}
+
+let result = multiply(10, 2);
+console.log(result); // 20
+```
+
+The return can be located anywhere in the body of the function. Once the execution of the code reaches the point of return (pun intended), the function stops and the value returns to the code that called it.
