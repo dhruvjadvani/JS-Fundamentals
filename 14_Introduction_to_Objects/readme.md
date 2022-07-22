@@ -27,3 +27,20 @@ let country = {
 As in many cases in JavaScript, object creation often starts with defining and initializing a variable. In the example above, we've assigned the object the name country. Then two properties were specified in curly brackets: the key name with the value "Netherlands", and the key population with 17.18. As you can see, objects are very useful for grouping data.
 
 **The syntax with curly brackets used to create objects has its own name: literal notation. It's not the only way to do it, but probably the most common.**
+
+# Properties
+Objects are one of the pillars of the JavaScript language, so it's important to know how to work with their properties.
+
+- There is an opportunity to refer to the properties. To access the properties, we use a record with the object name and a dot. Let's use the previous code sample and try to access the name property:
+```
+console.log(country.name); // Netherlands
+```
+- Properties can also be added using the dot symbol and the = assignment symbol. Let's add to our object a property with the key capital and the value "Amsterdam" :
+```
+country.capital = "Amsterdam";
+```
+- To delete a property, we can use the delete operator and a dot. This is how removing the population property for an object named country will look like:
+```
+delete country.population;
+```
+
