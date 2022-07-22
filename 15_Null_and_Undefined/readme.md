@@ -36,3 +36,12 @@ getDetails(); // undefined
 ```
 In the example above, undefined is printed because the parameter a was missing in the written function.
 
+# Check the data types
+null and undefined literally mean "no value", but they have different data types:
+```
+console.log(typeof null);       // object
+console.log(typeof undefined);  // undefined
+```
+You expected that type null would return null, didn't you?
+
+You were right if you thought so. In fact, null is not an object, but a separate data type. This strange behavior is an officially recognized error in the language. The mistake has existed for several decades. The reason no one fixes it is that thousands of sites created in JavaScript depend on this kind of wrong behavior. Fixing this bug can lead to many sites and popular web applications crashing. That's why we have nothing else to do but remember this peculiarity of the language and take it into account when writing scripts.
