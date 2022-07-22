@@ -7,3 +7,31 @@ let name = null;
 console.log(name); // null
 ```
 The example above shows that the variable name is unknown or for some reason does not have a value.
+
+# undefined
+The undefined value is returned when a variable was declared, but its value wasn't set. Let's consider the following example:
+```
+let count; 
+console.log(count); // undefined 
+```
+Here, as expected, the undefined value was output to the console.
+
+undefined may also occur in cases when object properties do not exist:
+```
+let person = {
+  age: 27
+};
+
+console.log(person.name); // undefined
+```
+In this case, undefined is returned because we tried to output to the console a property name that wasn't specified in our object.
+
+But that's not all! The undefined value is also returned when a function has a missing parameter:
+```
+function getDetails(a) {
+  console.log(a);
+}
+
+getDetails(); // undefined
+```
+In the example above, undefined is printed because the parameter a was missing in the written function.
