@@ -26,3 +26,30 @@ Remember the order of arithmetic operations. If there are several numbers before
 ```
 
 Implicit conversion may be confusing, so be very attentive when writing programs.
+
+# Numeric conversion
+Numeric conversion occurs when you want to represent something as a number. To perform an explicit conversion, apply the Number() function:
+```
+Number("1");    // 1
+Number(" 37 "); // 37
+Number("");     // 0
+Number("\n3");  // 3
+Number("\n");   // 0
+Number("\t");   // 0
+Number(true);   // 1
+Number(false);  // 0
+```
+When converting a string to a number, spaces and \n and \t characters at the beginning and the end of the string are cut off. If the string turns out to be empty, the result will be 0. The boolean type behaves as expected: false turns into 0 and true turns into 1.
+
+Not all values can be converted into numbers. The result of the incorrect conversion attempts is NaN, which means Not-a-Number. For example, Number("apple") will return a NaN value.
+Implicit conversion is a little more confusing. It occurs in almost all mathematical functions and expressions:
+```
+true + 43 // 44
+3 - false // 3
+10 / "5"  // 2
+-true     // -1
++"85"     // 85
+```
+To be explicitly converted into a number, the string must be a correct number as well.
+
+Also, remember that the binary plus cannot turn a string into a number, while the Number() function can. So the result of the expression "5" + 7 will be a string, and the result of Number("5" + 7) will be a number.
