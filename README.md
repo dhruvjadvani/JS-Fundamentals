@@ -7,3 +7,9 @@ There is no character type in javascript!
 The function is called anywhere in the file. You can call the function both before and after its creation.
 
 The ability to call a function before its creation is due to the peculiarities of JS file processing by browsers: the browser first goes through the whole code, finds all functions and only then starts executing the code.
+
+# Projects
+## Zookeeper
+- https://github.com/dhruvjadvani/ZooKeeper-JS
+## Simple Chatty Bot
+- 
