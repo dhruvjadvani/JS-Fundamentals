@@ -53,3 +53,21 @@ true + 43 // 44
 To be explicitly converted into a number, the string must be a correct number as well.
 
 Also, remember that the binary plus cannot turn a string into a number, while the Number() function can. So the result of the expression "5" + 7 will be a string, and the result of Number("5" + 7) will be a number.
+
+# Boolean conversion
+Boolean conversion occurs when you want to represent something as a boolean. To explicitly convert data into a boolean value, the Boolean() function should be applied:
+```
+Boolean(1);            // true
+Boolean(0);            // false
+Boolean("Am I nice?"); // true
+Boolean("");           // false  
+```
+The rules for using this function are simple. The following values give the false value as the result of conversion: false, undefined, null, 0, NaN, and "". The conversion of all other values will give the true value.
+
+Implicit conversion occurs when using logical operators (||, &&, and !):
+```
+!!3                      // true
+0 || "go"                // "go"
+"Master" && "Margarita"  // "Margarita"
+```
+Implicit conversion with || and && operators occurs under the hood and eventually returns the original value of one of the operators.
