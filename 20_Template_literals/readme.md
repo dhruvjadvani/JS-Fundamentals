@@ -43,3 +43,19 @@ String text line 2
 ```
 This is quite handy because now there is no need to duplicate functions or puzzle over where to put line break characters (\n).
 
+# Syntactic sugar
+Thanks to the template literals, it is convenient not only to insert values of variables but also to insert whole expressions. Take a look at this example:
+```
+let a = 1;
+let b = 2;
+console.log(`The sum of numbers ${a} and ${b} is not equal to ${ 10 * a + b }.`);
+// The sum of numbers 1 and 2 is not equal to 12.
+```
+Without the template literals, this code would look like this:
+```
+let a = 1;
+let b = 2;
+console.log("The sum of numbers " + a + " and " + b + " is not equal to "+ (10 * a + b) + ".");
+// The sum of numbers 1 and 2 is not equal to 12.
+```
+Template literals are a truly useful innovation in ES6. It allows for flexible line management, easy creation of multi-line programs, and insertion of expressions into strings.
