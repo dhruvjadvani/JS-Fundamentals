@@ -64,7 +64,9 @@ marks[10] = 65;
 console.log(marks);
 ```
 The output of the above code is:
+
 ![image](https://user-images.githubusercontent.com/25152105/180514490-326bb878-09c0-4c0f-b7f9-0f7c750cae86.png)
+
 We get this output because the number 65 was assigned to index position 10, which is greater than the initial size of the Array. So, Array indexes 5, 6, 7, 8, and 9 remain empty as they haven't been initialized, and will return undefined if you attempt to access them.
 
 **Don't forget that [0] is the first element and [1] is the second element in an Array.**
