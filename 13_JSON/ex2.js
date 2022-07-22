@@ -5,7 +5,7 @@
 // Fill the library with at least three books and enter the resulting JSON.
 
 {
-  "Books": [
+  "books": [
     {
       "title": "Rich Dad Poor Dad",
       "author": "Robert Kiyosaki"
