@@ -35,3 +35,4 @@ function getDetails(a) {
 getDetails(); // undefined
 ```
 In the example above, undefined is printed because the parameter a was missing in the written function.
+
