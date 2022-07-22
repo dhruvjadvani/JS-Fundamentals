@@ -29,3 +29,26 @@ if (condition) {
   console.log("True!");
 }
 ```
+
+# The "else" block
+When the condition is false, the else block can be used instead of if. For example:
+```
+function meow() {
+  return "Meow!";
+}
+
+function sleep() {
+  return "Zzzzz...";
+}
+
+let time = 5;
+let sound;
+
+if (time >= 6) {
+  sound = meow();
+} else {
+  sound = sleep();
+}
+console.log(sound);
+```
+Here, our cat meows when the time is later than or equal to 6 am; otherwise, it sleeps.
