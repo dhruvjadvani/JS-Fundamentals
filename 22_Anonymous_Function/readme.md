@@ -90,3 +90,6 @@ const text = "I've been launched!";
 }(text));
 ```
 As before, you will see the text "I've been launched!" in the console.
+
+# Conclusion
+Anonymous functions are functions without a name. They are very convenient mostly due to their conciseness. The most common application of the anonymous functions is passing them as an argument and immediately calling them. Developers regularly use anonymous functions to create modern web applications.
