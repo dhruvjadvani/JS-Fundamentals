@@ -52,3 +52,53 @@ if (time >= 6) {
 console.log(sound);
 ```
 Here, our cat meows when the time is later than or equal to 6 am; otherwise, it sleeps.
+
+# Several conditions: "else if" block
+There are situations when we have not just two but several possible conditions. For this purpose we use the else if block:
+```
+function meow() {
+  return "Meow!";
+}
+
+function sleep() {
+  return "Zzzzz...";
+}
+
+function play() {
+  return "Bang bang!";
+}
+
+let time = 9;
+let sound;
+
+if (time < 6) {
+  sound = sleep();
+} else if (time < 8) {
+  sound = meow();
+} else {
+  sound = play();
+}
+console.log(sound);
+```
+As you can see, here we check three possible variants: the cat sleeps when time is before 6 am, meows when it’s between 6 and 8 am, and plays otherwise. We’ve defined three functions for three possible sounds the cat makes.
+
+# The ternary operator "? :"
+When the aim of the program is to assign a variable depending on a condition, we can use the short version of the if...else block: the ternary operator ? : . It works like this:
+```
+let time = 11;
+let isHungry = (time >= 6) ? true : false;
+```
+In the example, you can see the condition. Then goes ? and two possible values of the set variable: first, what we set when the condition is true, and after : comes whatever we set for false. A condition for visibility can be placed in brackets, but this action is not necessary. The same code, but without brackets, will be executed in the same way:
+```
+let time = 11;
+let isHungry = time >= 6 ? true : false;
+```
+The condition can be as simple as in the example above, as well as more complex. For example, by using logical operators:
+```
+let time = 11;
+let isHungry = !(time <= 6) ? true : false;
+```
+Let’s take a closer look at our condition. The ! means “not”, so we can interpret the statement as “isn't the time after or equal to 6?”.
+
+
+
