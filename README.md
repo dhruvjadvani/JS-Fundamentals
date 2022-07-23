@@ -13,3 +13,7 @@ The ability to call a function before its creation is due to the peculiarities o
 - https://github.com/dhruvjadvani/ZooKeeper-JS
 ## Simple Chatty Bot
 - https://github.com/dhruvjadvani/Simple-Chatty-Bot-Js
+## Simple Currency Converter
+- https://github.com/dhruvjadvani/Simple-Currency-Converter
+## Coffee Machine
+- 
