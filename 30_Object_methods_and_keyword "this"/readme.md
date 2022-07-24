@@ -2,7 +2,7 @@ When writing scripts, we usually need to create objects to present something fro
 
 # Object method creation
 Let's try to understand how object methods are created. To do this, consider the following example:
-```
+```javascript
 let product = {
   name: "Microwave",
   description: "With oven mode",
@@ -20,7 +20,7 @@ In this code, we have allowed the object to report a discount on the product by 
 
 # Shortened recording
 There's a shorter way of setting functions as properties. For example:
-```
+```javascript
 let person = {
   greetings: function() {
     console.log("Hello");
@@ -28,7 +28,7 @@ let person = {
 };
 ```
 We can also skip the keyword function:
-```
+```javascript
 let person = {
   greetings() {
     console.log("Hello");
@@ -39,7 +39,7 @@ Shortened syntax not only saves you time but also makes the code more readable.
 
 # "this" keyword
 In natural language, we can point to a specific person, animal, or object using pronouns. In JavaScript you may just as well refer to a specific object using the keyword this:
-```
+```javascript
 let user = {
   firstName: "Elliot",
   lastName: "Alderson",
@@ -59,7 +59,7 @@ In the above example, with the help of this, the fullName function has accessed 
 Arrow functions cannot bind this. In other words, the arrow functions do not have their own this.
 
 If we use this inside an arrow function, its value is taken from an external function declared the usual way:
-```
+```javascript
 let movie = {
   name: "The Thirteenth Floor",
   age: 1999,
