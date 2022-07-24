@@ -16,7 +16,7 @@ In most cases, companies do not need to create their own style recommendation be
 Let's take a look at the most common style guide, the Airbnb JavaScript Style Guide. This manual describes recommendations for spaces, empty strings, semicolons, line length, and so on. Let's consider a few of them!
 
 - Sometimes developers write long lines of code; to read them fully, you need to use horizontal scrolling. The best alternative is to set the maximum line length and move the other characters below. As stated in the Airbnb JavaScript Style Guide, 100 characters for a string is sufficient.
-```
+```javascript
 // good 
 const thePaymentIsActive = isPaymentFromToday(payment.date)
 && isPaymentFromAvaliableAdresses(payment.id) 
@@ -27,7 +27,7 @@ const thePaymentIsActive = isPaymentFromToday(payment.date) && isPaymentFromAval
 ```
 
 - There is an eternal argument between programmers whether to use spaces or tabs as an indent. The Airbnb JavaScript Style Guide provides an answer to this question and recommends using two spaces. If you like to use tabulation, you can set it to two spaces.
-```
+```javascript
 // good
 function myFunction() {
   const name = "Alex";
@@ -44,7 +44,7 @@ function myFunction() {
 }
 ```
 - In functions, you should place one space before the first bracket.
-```
+```javascript
 // good
 function show() {
   console.log("My name is Helen");
@@ -57,7 +57,7 @@ function show(){
 }
 ```
 - In the control statements, it is better to put only one space before the opening bracket.
-```
+```javascript
 // good
 if (a === b) {
   console.log(a)
@@ -69,7 +69,7 @@ if(a === b) {
 }
 ```
 - You should only use one empty line to separate your code.
-```
+```javascript
 // good 
 if (a > b) {
   console.log ("a is bigger than b");
@@ -85,7 +85,7 @@ if (a > b) {
 }
 ```
 - Don't forget to write the semicolon at the end of your statements. Otherwise, JavaScript may split your code incorrectly.
-```
+```javascript
 // good 
 const a = 5;
 const b = 7;
@@ -97,7 +97,7 @@ const b = 7
 const c = 10
 ```
 - It is better to use camelCase for naming functions, objects, and methods. camelCase means that for names consisting of multiple words, the first word should start with a lowercase letter, and the rest of the words start with a capital letter.
-```
+```javascript
 // good
 function myFunctionToCheckValues() {
   //...
