@@ -1,5 +1,5 @@
 Sometimes programmers need to repeat the same part of code several times over. Assume that you go to work every day, Monday to Friday, and greet your colleague Nessie as you get to your office: “Hi Nessie!” Let's simulate this situation using the tools we already have:
-```
+```javascript
 console.log("1, Hi Nessie!"); // Monday
 console.log("2, Hi Nessie!"); // Tuesday
 console.log("3, Hi Nessie!"); // Wednesday
@@ -7,7 +7,7 @@ console.log("4, Hi Nessie!"); // Thursday
 console.log("5, Hi Nessie!"); // Friday
 ```
 We can create a loop instead of all that repetition:
-```
+```javascript
 let i;
 for (i = 1; i <= 5; i++) {
     console.log(i + ", Hi Nessie!");
@@ -19,19 +19,19 @@ Let's zoom in on the syntax of the for loop. We set a variable before the loop: 
 
 # Infinite loop
 An infinite loop is a loop whose execution never stops because there is no condition for exiting the loop (the second condition in the brackets). To write an infinite loop, just skip the condition for exiting the loop to make a construction like this:
-```
+```javascript
 for (i=0; ; i++) {
     console.log(i);
 }
 ```
 ... or this:
-```
+```javascript
 for (i=0; ;) {
     console.log(i);
 }
 ```
 ... or even this!
-```
+```javascript
 for (; ;) {
     console.log('Hi!');
 }
@@ -42,7 +42,7 @@ Be careful with infinite loops: since there's no exit from an infinite loop, soo
 
 # For...in loop
 Let's examine another loop type related to the for loop category, the for...in loop:
-```
+```javascript
 let animals = ['cat', 'dog', 'turtle'];
 
 for (x in animals) {
