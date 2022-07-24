@@ -14,7 +14,7 @@ JavaScript is based on the ECMAScript standard (often shortened to ES). The late
 # The first program
 Programs written in this language are called scripts. Here is an example of a simple JS script that prints I am starting to learn JavaScript!:
 
-```
+```javascript
 console.log("I am starting to learn JavaScript!");
 ```
 
