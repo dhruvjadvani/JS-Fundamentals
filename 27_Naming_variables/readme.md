@@ -5,7 +5,7 @@ As you know, each variable has a unique name that identifies it among other vari
 There are no specific requirements for characters that can be used in JavaScript to create names. However, there are two restrictions that you can easily remember: a name can only consist of letters, numbers, and symbols _, $; and it shouldn't start with a digit.
 
 Look at the examples below:
-```
+```javascript
 let $testName; // right
 let testName;  // right
 let test_name; // right
@@ -23,7 +23,7 @@ In JS, the case of the characters matters, so firstName and firstname will be di
 Reserved names cannot be used when selecting a variable name. These are words that already perform specific functions in Javascript. These words include: let, const, return, and function. The complete list of words that are reserved can be found on MDN.
 
 The code below returns a syntactical error:
-```
+```javascript
 let const = 5;          // error
 let return = "apple";   // error 
 ```
@@ -31,14 +31,14 @@ let return = "apple";   // error
 In addition, there are the following conventions for naming variables:
 
 - The variable name must be readable, descriptive, and it should explain to the reader what sort of values it stores. For example:
-```
+```javascript
 let count;  // good name
 let n;      // bad name
 ```
 Coming up with such names — short and precise — becomes easier with experience, but only if you put some work in it.
 
 - Despite the validity of the underscore _ symbol, most style guides recommend opting for camelCase to write a name consisting of several words. camelCase is a way of writing phrases where each new word in the middle of the phrase begins with a capital letter, without intermediate spaces or punctuation marks:
-```
+```javascript
 let serverMessage; // the variable name is written according to camelCase practice
 ```
 **These conventions are optional, but it is strongly recommended to follow them.**
