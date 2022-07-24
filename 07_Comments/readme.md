@@ -4,14 +4,14 @@ JavaScript language supports two types of comments: single-line and multi-line. 
 
 # Single-line comments
 Comments that occupy only one line are called single-line comments. Take a careful look at the syntactic features of these comments:
-```
+```javascript
 console.log("Nice to see you!"); // This code outputs the message to the console
 ```
 In the example above, all text after // is ignored by the interpreter. With the help of such notes, you will quickly remember what a certain code fragment is intended for, even if it's been a while since you last saw it.
 
 # Multi-line comments
 Comments that take up several lines are called multi-line comments. These are their syntactic features:
-```
+```javascript
 /*  
   The following code outputs the message to the console
   The console will display a line with the text "Hello, JS!"
@@ -21,7 +21,7 @@ console.log("Hello, JS!");
 The interpreter ignores all text between /* and the nearest */. Such comments are useful for explaining particularly complex pieces of code or temporarily commenting out code fragments when you need to find an error. Also, multi-line comments located at the beginning of a file are quite useful when you need to specify copyright information.
 
 Sometimes you may find a slightly modified syntax of multi-line notes: the comment opens with the /** tag, and each line starts with an *:
-```
+```javascript
 /**
 * The first program
 * Author: Bob  
