@@ -3,7 +3,7 @@ Arrays are used to store multiple elements in a single variable. They are a spec
 
 # Declaration of Arrays
 In JavaScript, there are two ways to declare an Array:
-```
+```javascript
 let marks = new Array(); // Method 1
 
 let marks = []; // Method 2
@@ -12,7 +12,7 @@ Method 2 is usually preferred over Method 1.
 
 # Initialization of Arrays
 If the Array is declared using Method 2, it can be initialized in the following way:
-```
+```javascript
 // Method 2
 
 // Declaring and initializing the Array at the same time.
@@ -24,7 +24,7 @@ let marksTwo = ["forty-five", "fifty", 44, 30, "twenty-nine"] // Strings and int
 Note that a single Array can contain elements of different data types.
 
 Next, let's see how to initialize Arrays using Method 1:
-```
+```javascript
 // Method 1
 
 // Declaring and initializing the Array at the same time.
@@ -38,11 +38,11 @@ let marksThree = new Array("45"); // Creates an Array containing one string elem
 As you can see, marksOne is an Array of five integers, and marksTwo is an Array of five undefined elements. This syntax can be confusing, so it's best not to use Method 1 when working with numbers. Fortunately, as shown, the same problem doesn't apply to strings — marksThree is an Array containing the string "45".
 
 If you declare an Array of undefined elements like this:
-```
+```javascript
 let marks = new Array(5);
 ```
 You can initialize them one by one:
-```
+```javascript
 marks[0] = "forty-five";
 marks[1] = "fifty";
 marks[2] = 44;
@@ -58,7 +58,7 @@ Array indexes start from 0, so we can use the index numbers shown in the example
 Attempting to access an element with an index beyond the bounds of an Array will return undefined. And the same will happen if you try to access an element within an Array's bounds that hasn't been initialized.
 
 Let's look at an example to help illustrate this point:
-```
+```javascript
 let marks = [45, 50, 44, 30, 29];
 marks[10] = 65;
 console.log(marks);
@@ -73,18 +73,18 @@ We get this output because the number 65 was assigned to index position 10, whic
 
 # Length of an Array
 An Array's length property returns the number of elements that it contains, as shown in the below example:
-```
+```javascript
 const languages = ["C", "C++", "Python", "Java", "JavaScript"];
 
 let len = languages.length; // 5
 ```
 **Keep in mind that the length of an Array is always one more than its highest index number. So, if an Array's length is 5, its highest index number will be 4.**
 Let's look at another example:
-```
+```javascript
 const colors = ['orange', 'blue', 'red', 'pink', 'magenta'];
 ```
 This Array has five elements. You already know that you can access the first one using colors[0], the second with colors[1], and so on. But what if you want to get the last element of the Array and you don't know its length? You can use the length property in this situation, as you can see below:
-```
+```javascript
 const lastItem = colors[colors.length - 1]; // "magenta"
 ```
 # isArray()
@@ -93,7 +93,7 @@ The isArray() method returns true if an object is an Array, otherwise false.
 The full syntax is Array.isArray(obj) .
 
 The below examples show how to use this method:
-```
+```javascript
 let marks = [45, 50, 44, 30, 29];
 
 Array.isArray(marks); // true
