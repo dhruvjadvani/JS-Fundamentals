@@ -40,3 +40,42 @@ The result will be:
 "Today I ate apples"
 ```
 We used the first argument (currentValue) inside the callback to display the value of the current element. As a result, we have three different phrases, the last words of which correspond to the elements of the array Fruit.
+
+# Examples
+You can rewrite the previous code using a named callback function:
+```
+function showText(value) {
+  console.log("Today I eat " + value);
+}
+arrayFruit.forEach(showText);
+```
+The result will be the same.
+
+We can also use other callback arguments:
+```
+function showItem(item, index, array) {
+  console.log("My value is " + item + ". I’m the " + index + " element of array " + array);
+}
+arrayFruit.forEach(showItem);
+```
+The result will be:
+```
+"My value is pineapples. I'm the 0 element of array pineapples,oranges,apples"
+"My value is oranges. I'm the 1 element of array pineapples,oranges,apples"
+"My value is apples. I'm the 2 element of array pineapples,oranges,apples"
+```
+This way, you can use not only the current element inside the callback function, but also its index and the array itself.
+
+If you want to specify custom this in the callback function, you must use the second forEach argument:
+```
+const customThis = {
+  value: 10
+}
+
+function showThisValue() {
+  console.log(this.value);
+}
+
+arrayFruit.forEach(showThisValue, customThis);
+```
+The result will be 10.
