@@ -2,7 +2,7 @@ In JavaScript, there are two special data types to indicate the absence of a val
 
 # null
 null means that the variable was explicitly assigned an empty or non-existent value. If the variable is null, we know that it does not contain an acceptable number, string or other data type:
-```
+```javascript
 let name = null; 
 console.log(name); // null
 ```
@@ -10,14 +10,14 @@ The example above shows that the variable name is unknown or for some reason doe
 
 # undefined
 The undefined value is returned when a variable was declared, but its value wasn't set. Let's consider the following example:
-```
+```javascript
 let count; 
 console.log(count); // undefined 
 ```
 Here, as expected, the undefined value was output to the console.
 
 undefined may also occur in cases when object properties do not exist:
-```
+```javascript
 let person = {
   age: 27
 };
@@ -27,7 +27,7 @@ console.log(person.name); // undefined
 In this case, undefined is returned because we tried to output to the console a property name that wasn't specified in our object.
 
 But that's not all! The undefined value is also returned when a function has a missing parameter:
-```
+```javascript
 function getDetails(a) {
   console.log(a);
 }
@@ -38,7 +38,7 @@ In the example above, undefined is printed because the parameter a was missing i
 
 # Check the data types
 null and undefined literally mean "no value", but they have different data types:
-```
+```javascript
 console.log(typeof null);       // object
 console.log(typeof undefined);  // undefined
 ```
