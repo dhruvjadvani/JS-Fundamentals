@@ -8,13 +8,13 @@ In this topic, we will consider two simple data types which are often used in pr
 When working with textual information in your program, you will have to use strings. This type of data is extremely common in JavaScript. Strings are written in single or double quotes.
 
 - Examples of strings in double quotes:
-```
+```javascript
 console.log("");             // empty string
 console.log("string");       // one word
 console.log("Hello, world"); // a phrase
 ```
 - Examples of strings in single quotes:
-```
+```javascript
 console.log('a');    // single character
 console.log('1234'); // a sequence of digits
 ```
@@ -23,7 +23,7 @@ As you can see, strings are very easy to use!
 
 # Numbers
 Numbers are the most important thing for any programmer. You will hardly be able to write a serious program without numbers, so let's see how to output a number to the console:
-```
+```javascript
 console.log(12);
 console.log(0); 
 console.log(-11); 
@@ -39,11 +39,11 @@ We can easily recognize the data type using the typeof operator. Let's look at t
 There are two ways to write this operator.
 
 - With parentheses:
-```
+```javascript
 console.log(typeof(9)); // number
 ```
 - Without parentheses:
-```
+```javascript
 console.log(typeof 9); // number
 ```
 The result of these two code samples is the same: we want to find out what type of data 9 is, and it turns out to be a number.
