@@ -1,6 +1,6 @@
 # What is forEach
 Let's say you have an array of names: arrayNames = ["Mike", "Alex", "Asya"]. You want to show each element through the console.log. As you remember, you can do this using the index:
-``
+```
 console.log(arrayNames[0]);
 console.log(arrayNames[1]);
 ```
