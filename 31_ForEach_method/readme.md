@@ -1,13 +1,13 @@
 # What is forEach
 Let's say you have an array of names: arrayNames = ["Mike", "Alex", "Asya"]. You want to show each element through the console.log. As you remember, you can do this using the index:
-```
+```javascript
 console.log(arrayNames[0]);
 console.log(arrayNames[1]);
 ```
 Now let's imagine that you have an array of a hundred elements, or you don't even know how many elements there are. How do you print all the elements in this case?
 
 The best way to do this is the forEach method. It reads each element of the array sequentially and performs the same action with it. We can use it to display each element of the array via the console.log:
-```
+```javascript
 arrayNames.forEach(console.log);
 ```
 As a result, console.log first shows the name "Mike", then "Alex", and finally, "Asya".
@@ -27,7 +27,7 @@ In the previous example, we passed the console.log function to the forEach metho
 2. thisArg — a value that we can use as this in the callback function.
 
 Here is an example:
-```
+```javascript
 const arrayFruit = ["pineapples", "oranges", "apples"];
 arrayFruit.forEach(function(value) {
   console.log("Today I ate" + value);
@@ -43,7 +43,7 @@ We used the first argument (currentValue) inside the callback to display the val
 
 # Examples
 You can rewrite the previous code using a named callback function:
-```
+```javascript
 function showText(value) {
   console.log("Today I eat " + value);
 }
@@ -52,7 +52,7 @@ arrayFruit.forEach(showText);
 The result will be the same.
 
 We can also use other callback arguments:
-```
+```javascript
 function showItem(item, index, array) {
   console.log("My value is " + item + ". I’m the " + index + " element of array " + array);
 }
@@ -67,7 +67,7 @@ The result will be:
 This way, you can use not only the current element inside the callback function, but also its index and the array itself.
 
 If you want to specify custom this in the callback function, you must use the second forEach argument:
-```
+```javascript
 const customThis = {
   value: 10
 }
