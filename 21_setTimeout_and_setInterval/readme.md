@@ -7,13 +7,13 @@ In the JavaScript world, we would say that you are "scheduling a call": you have
 
 One of the methods to help with scheduling a call is setTimeout. It doesn't run instantly: setTimeout is executed only after a specific period of time. Look at the example for an advertising message that is showed after 5 seconds:
 
-```
+```javascript
 setTimeout(function() {
   console.log("Welcome to our website! You have a special discount today!");
 }, 5000)
 ```
 Here is another way to write setTimeout. As you see, we call a function named welcome instead of an anonymous function:
-```
+```javascript
 function welcome(name) {
   console.log(name + ", welcome to our website! You have a special discount today!");
 }
@@ -28,13 +28,13 @@ The text "Mary" goes to the welcome function as the name variable, and we will s
 
 # Zero delays setTimeout
 Let’s consider another case with the setTimeout method. Here's our example:
-```
+```javascript
 setTimeout(function() {
   console.log("Welcome to our website!");
 }, 5000)
 ```
 Now, what happens if we change the delay variable to zero or delete it?
-```
+```javascript
 function welcome() {
   console.log("Welcome to our website!");
 }
@@ -42,7 +42,7 @@ function welcome() {
 setTimeout(welcome, 0)
 ```
 **The function will be executed immediately, without delay. However, you should remember that if another function is written after it, it will be executed first.** Let's consider an example to better understand it:
-```
+```javascript
 function welcome() {
   console.log("Welcome to our website!");
 }
@@ -59,7 +59,7 @@ Imagine you want to wake up at 8 a.m. every day. To do it, you add an alarm for 
 The method setInterval does just that: it calls the function again and again after a specific time period.
 
 Here is an example:
-```
+```javascript
 function alarm(time) {
   console.log("Wake up! It’s " + time + " o'clock!");
 }
@@ -80,13 +80,13 @@ As you know, it's possible to run a function with a delay. Jack the programmer h
 When you launch the timer, the browser keeps running the task forever and hence spends resources. To avoid it, we should stop timers that aren't needed. You run the timer with setTimeout, and to break it, you should use clearTimeout.
 
 In this case, you should know the id of the timer you want to stop. setTimeout helps with that: it returns the identifier of the timer that had been created. Look at the following example:
-```
+```javascript
 let timerId = setTimeout(...);
 
 clearTimeout(timerId);
 ```
 If you want to break the timer made by setInterval, you have to use clearInterval:
-```
+```javascript
 const intervalId = setInterval(alarm, 2000);
 
 clearInterval(intervalId);
