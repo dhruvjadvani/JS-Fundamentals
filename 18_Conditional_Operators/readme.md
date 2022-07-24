@@ -6,7 +6,7 @@ In life, we sometimes find ourselves at a crossroads where our path forks and sp
 
 # The "if" statement
 Often we need to make a decision based on some conditions. In programming and JavaScript particularly, this concept is realized with the help of the if statement. It’s called a conditional operator. For example, imagine you have a cat that meows when it gets hungry after 6 am. We can write a statement:
-```
+```javascript
 function meow() {
   return "Meow!";
 }
@@ -22,7 +22,7 @@ if (time >= 6) {
 In the function meow() we describe what the cat does every time it is after 6 am.
 
 Note that when we work with the if statement, the condition inside the parentheses is converted to a boolean. The code inside if is executed if the boolean is true. So every boolean could be a condition:
-```
+```javascript
 let condition = true; 
 
 if (condition) {
@@ -32,7 +32,7 @@ if (condition) {
 
 # The "else" block
 When the condition is false, the else block can be used instead of if. For example:
-```
+```javascript
 function meow() {
   return "Meow!";
 }
@@ -55,7 +55,7 @@ Here, our cat meows when the time is later than or equal to 6 am; otherwise, it 
 
 # Several conditions: "else if" block
 There are situations when we have not just two but several possible conditions. For this purpose we use the else if block:
-```
+```javascript
 function meow() {
   return "Meow!";
 }
@@ -84,17 +84,17 @@ As you can see, here we check three possible variants: the cat sleeps when time 
 
 # The ternary operator "? :"
 When the aim of the program is to assign a variable depending on a condition, we can use the short version of the if...else block: the ternary operator ? : . It works like this:
-```
+```javascript
 let time = 11;
 let isHungry = (time >= 6) ? true : false;
 ```
 In the example, you can see the condition. Then goes ? and two possible values of the set variable: first, what we set when the condition is true, and after : comes whatever we set for false. A condition for visibility can be placed in brackets, but this action is not necessary. The same code, but without brackets, will be executed in the same way:
-```
+```javascript
 let time = 11;
 let isHungry = time >= 6 ? true : false;
 ```
 The condition can be as simple as in the example above, as well as more complex. For example, by using logical operators:
-```
+```javascript
 let time = 11;
 let isHungry = !(time <= 6) ? true : false;
 ```
