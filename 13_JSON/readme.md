@@ -7,7 +7,7 @@ JSON text can be built on one of two structures:
 - an orderly set of values (array or list).
 
 JSON objects are written in curly braces {}, and their key:value pairs are separated by a comma ,. The key and the value in the pair are separated by a colon :. Here is an example for you:
-```
+```json
 {
     "first_name": "Sophie",
     "last_name": "Goodwin",
@@ -20,7 +20,7 @@ Keys in an object are always strings, but values can be any of seven types of va
 
 **Note that there is no need to put a comma (,) after the last key:value pair.**
 Arrays are written in square brackets [] and their values are separated by a comma ,. The value in the array, again, can be of any type, including another array or object. Here is an example of an array:
-```
+```javascript
 ["night", "street", false, [ 345, 23, 8, "juice"], "fruit"]
 ```
 Most often, an array will include similar elements.
@@ -29,7 +29,7 @@ Most often, an array will include similar elements.
 
 # Nested objects
 JSON is a highly flexible format. You can nest objects inside other objects as properties:
-```
+```json
 {
   "persons": [
     {
@@ -53,7 +53,7 @@ JSON is a highly flexible format. You can nest objects inside other objects as p
 If objects and arrays contain other objects or arrays, the data has a tree-like structure.
 
 The nested objects are fully independent and may have different properties:
-```
+```json
 {
   "persons": [
     {
