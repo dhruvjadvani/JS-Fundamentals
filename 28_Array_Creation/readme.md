@@ -1,7 +1,7 @@
 # Creating an Array
 
 The simplest and most common way to create an array is with literal notation. Using this approach is similar to assigning a single value to a variable with the let or const keyword:
-```
+```javascript
 // literal notation
 let arr = [element_1, element_2, element_3, element_n];
 
@@ -13,7 +13,7 @@ let arr3 = ['JavaScript', 12];
 However, as you can see above, square brackets [] are placed around the array of elements. Also, strings stored in an array must be enclosed with either single '' or double quotes "".
 
 Alternatively, you can use the new keyword with the Array() constructor to create Array objects. This approach enables you to pass a single number argument to the Array() constructor to specify its length. An array containing this number of empty slots will then be created:
-```
+```javascript
 // Single argument
 let arrayCreate = new Array(6);
 
@@ -21,7 +21,7 @@ console.log(arrayCreate.length) // 6
 console.log(arrayCreate[0]) // undefined
 ```
 If multiple arguments are passed to the Array() constructor, an array containing the given elements is created, as shown below:
-```
+```javascript
 // Multiple arguments
 let platforms = new Array('JetBrains', 'Hyperskill', 'WebStorm', 'PyCharm');
 
@@ -39,7 +39,7 @@ fill(value, start, end)
 - start: the index where the filling should begin. This argument is optional, and its default value is 0.
 - end: the index where the filling should finish. This argument is also optional, and its default is the array's length.
 You can see some examples in the following code snippet:
-```
+```javascript
 const myNumbers = [1, 4, 7, 10, 15];
 
 // fill with 0 from position 1 until position 3
@@ -51,7 +51,7 @@ console.log(myNumbers.fill(13)); // [13, 13, 13, 13, 13]
 console.log(myNumbers.fill(5, 2)); // [13, 13, 5, 5, 5]
 ```
 Now, let's create an array by using the new keyword and the fill() method together:
-```
+```javascript
 let numberArray = new Array(6).fill(2); // [2, 2, 2, 2, 2, 2]
 ```
 The above code will create an array with 6 slots and fill each one with the number 2.
@@ -69,11 +69,11 @@ Array.from(object, mapFunction, thisValue)
 Let's look at some examples that demonstrate how to create an array with Array.from().
 
 Using a string:
-```
+```javascript
 Array.from('Hello'); // ['H', 'e', 'l', 'l', 'o']
 ```
 Using function arguments:
-```
+```javascript
 function createArray() {
   return Array.from(arguments);
 }
@@ -81,14 +81,14 @@ function createArray() {
 createArray(2, 4, 6); // [2, 4, 6]
 ```
 Passing an arrow function to the mapFunction parameter:
-```
+```javascript
 Array.from([3, 5, 7], x => x * x); // [9, 25, 49]
 ```
 # The of() method
 Array.of() was introduced in Javascript version ES6. It creates a new Array instance containing the given arguments, regardless of their type or number. The syntax of the of() method is Array.of(element_1, element_2, ..., element_n).
 
 You can see some examples of how to create an array using Array.of() below:
-```
+```javascript
 Array.of(15); // [15]
 
 Array.of(101, 202, 303); // [101, 202, 303]
