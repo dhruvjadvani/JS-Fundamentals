@@ -55,3 +55,21 @@ In the above example, with the help of this, the fullName function has accessed 
 
 **Applying this to nested objects can create some confusion. In such situations, you should keep it in mind that the keyword this refers to the object in whose method it is used.**
 
+# "this" and arrow functions
+Arrow functions cannot bind this. In other words, the arrow functions do not have their own this.
+
+If we use this inside an arrow function, its value is taken from an external function declared the usual way:
+```
+let movie = {
+  name: "The Thirteenth Floor",
+  age: 1999,
+  getInfo() {
+    let arrow = () => console.log("The movie " + this.name + " was shot in " + this.age);
+    arrow();
+  }
+}; 
+
+movie.getInfo(); // The movie The Thirteenth Floor was shot in 1999
+```
+
+In fact, the specifics of using this in JavaScript are not limited to the examples described above. Here we've covered only the basics of working with this keyword, so there's a lot more to learn.
