@@ -2,7 +2,7 @@ A loop is an action (a part of code) that is repeated a certain amount of times.
 
 # While syntax
 The while loop has the following syntax:
-```
+```javascript
 while (condition) {
 ...
 }
@@ -10,7 +10,7 @@ while (condition) {
 It runs while the condition == true. Once the value in parentheses becomes false, the loop terminates.
 
 Look at the following example:
-```
+```javascript
 let n = 2;
 while (n < 100) {
     n = n * n;
@@ -18,7 +18,7 @@ while (n < 100) {
 }
 ```
 Eventually, we get this answer:
-```
+```javascript
 4
 16
 256
@@ -31,13 +31,13 @@ At the second iteration, we again check the condition before entering the loop. 
 
 # Do...while syntax
 There is another kind of loop which runs while the conditions are true: it is called the do...while loop. It has the following syntax:
-```
+```javascript
 do {
 ...
 } while (condition);
 ```
 The example above can be rewritten using the do...while construction:
-```
+```javascript
 let n = 2;
 do {
     n = n * n;
@@ -45,7 +45,7 @@ do {
 } while (n < 100);
 ```
 It is not hard to see that the conclusion will be just the same as it was with while:
-```
+```javascript
 4
 16
 256
@@ -54,7 +54,7 @@ So what is the difference between these, and why would we need two types of loop
 
 # While Vs do...while loops
 Actually, there is a difference. The example below will help us spot it.
-```
+```javascript
 let n = 256;
 while (n < 100) {
     n = n * n;
@@ -62,7 +62,7 @@ while (n < 100) {
 }
 ```
 What will be displayed? That's right: nothing! The accuracy of the condition is checked before entering the loop. So what about do...while? Run the following code in the console:
-```
+```javascript
 let n = 256;
 do {
     n = n * n;
