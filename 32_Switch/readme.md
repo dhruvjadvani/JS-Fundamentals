@@ -74,3 +74,28 @@ switch (cityTo) {
 If cityTo is equal to Berlin, you will get a message "The price is $100" in the console, just like before. If cityTo contains "Stockholm ", "Athens", or "Helsinki", you will see "The price is $90".
 
 This way, the default case works if a few cases don't match. The default case can be placed in any part of the switch statement, but by convention it is better to add it to the last clause.
+
+# Break operator
+In all previous examples, you probably noticed the break keyword added at the end of each code snippet. As a result, the program compared each expression and, when it was true, processed the associated block and stopped calculating the remaining cases. The situation would be different if we forgot to insert the break keyword:
+```javascript
+const cityTo = "Berlin";
+
+switch (cityTo) {
+  case "Berlin":
+    console.log("The price is $100");
+  case "Paris":
+    console.log("The price is $120");
+  case "London":
+    console.log("The price is $150");
+  default:
+    console.log("The price is $90");
+}
+```
+When the browser finds the correct statement, it starts executing it until it finds the break keyword. Without it, the browser will think that we don't want to stop the program, so it will continue to process other blocks of code even if they correspond to other cases. Then, the result of executing the code in the console will look like this:
+```
+The price is $100
+The price is $120
+The price is $150
+The price is $90
+```
+That being said, please, do not forget to use the break keyword after each code block to avoid errors!
