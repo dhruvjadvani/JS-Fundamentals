@@ -10,7 +10,7 @@ The above syntax consists of the following:
 - start, starting index from which the slice method starts to extract the string.
 - end (optional), ending index up to which the slice method extracts the string.
 Consider an example in which you need to extract the second-level domain. Typically, a second-level domain comes after "@" in an email. For example, in "abc@xyz.com" a second-level domain is "xyz".
-```
+```javascript
 let email = "hyperskill@gmail.com";
 email.slice(11, 16); // 'gmail'
 
