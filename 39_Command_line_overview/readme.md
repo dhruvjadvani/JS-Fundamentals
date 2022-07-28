@@ -9,5 +9,31 @@ Besides, programs executable by the command-line interface can be written in a c
 
 All operating systems have command-line interfaces. Applications may have it as well. Also, modern programming languages provide an interactive command-line mode, in which you execute code line by line.
 
+# Learning commands
+It's time to learn some important commands. Let's open the command-line interpreter and type some commands. When you open it, you will see something similar to the below text.
+```
+C:\Users\name>
+```
+It means that you are in this directory and you can work in the CLI. Now let's try to use it.
+
+Imagine you just woke up on the floor in a room unfamiliar to you. In fact, everything is unfamiliar to you, you don't remember anything, even your name. There's only a computer with the open terminal and this guide, so you decide that it might be helpful to figure something out. So, now you will type your command next to this path.
+
+First, type the whoami and press Enter. Unfortunately, it won't provide you with a deep and satisfying answer about who you really are, but you will see something like this:
+```
+desktop-qd7c3ju\shanika
+```
+Good, now you know your name, an imaginary one, at least. As you could already guess, whoami command just returns you the username you used in your machine. That's why you see the above output.
+
+Next, type dir if you use Windows or ls if you use Linux/macOS and press Enter. Both of these commands return the list of files and folders in your current directory. This is one of the most widely used commands by developers especially when they work on servers.
+
+If you have Windows, you will see something similar to the below image.
+
+![image](https://user-images.githubusercontent.com/25152105/181426051-abeb7452-3634-45ab-9429-5ed339d2462f.png)
+
+There's no file that is helpful for your situation. Alas!
+
+Isn't there a command to escape? Yes, there's one. Just type exit and you'll be out... of the command-line interpreter because this command lets you exit it. Good news, you've just learned some useful commands and completed the quest, Shanika! Now you can be free.
+
+- https://ss64.com/
 
 
