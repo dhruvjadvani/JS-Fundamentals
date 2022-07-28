@@ -2,7 +2,7 @@
 When we create a variable inside a function or block of code, we actually create a local variable that is available only within a certain part of code but not in the entire program.
 
 Let's look at the example:
-```
+```javascript
 function someFunc() {
   let someVar = "local";
   console.log("Some variable in local scope - " + someVar);
@@ -18,7 +18,7 @@ Local variables in their turn can have function and block scope. A variable decl
 
 We can have several blocks of code in one function:
 
-```
+```javascript
 function someFunc2() {
   let funcVar = "function scope variable";
   console.log("Some variable in function local scope - " + funcVar);
@@ -38,7 +38,7 @@ As you can see, we can access a variable declared in external function from the 
 
 # Global scope
 A global variable is accessible from anywhere in the program, not just a particular block of code. Here is an example:
-```
+```javascript
 let someVar = "global";
 
 function someFunc() {
@@ -58,7 +58,7 @@ The variable someVar here is global, because it can be called from anywhere in t
 
 **If a variable is declared without a special keyword it's considered a global variable by default, no matter where in the program it was declared.** For example, try running this in the console:
 
-```
+```javascript
 function someFunc() {
   someVar = "global";
   console.log("Some variable in local scope - " + someVar);
@@ -76,7 +76,7 @@ Some variable in global scope - global
 
 # Priority of variables
 local and global variables differ in their priority: it is higher for local variables. Let's consider the following example:
-```
+```javascript
 someVar = "global";
 
 function someFunc() {
@@ -100,14 +100,14 @@ Even though the variable someVar in a global scope was declared earlier, when we
 As you know, besides let, there are two more identifiers for declaring variables: const and var.
 
 Unlike with the let identifier, variables declared with const cannot be overridden. See the example below:
-```
+```javascript
 const someVar = "constant variable";
 someVar = "mutable variable";
 ```
 We will get **TypeError**.
 
 In earlier versions of JavaScript, it was customary to use var to declare a variable. However, today this method is considered obsolete. As we said above, the variable declared with var is available inside the whole function and has a so-called function scope. For example:
-```
+```javascript
 function someFunc() {
   var i;
   for (i = 0; i <= 5; i++) {
@@ -121,7 +121,7 @@ someFunc();
 ```
 
 Here we will get the last values of i and someVar:
-```
+```javascript
 function someFunc() {
   let i;
   for (i = 0; i <= 5; i++) {
