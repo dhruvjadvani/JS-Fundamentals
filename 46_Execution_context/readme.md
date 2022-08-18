@@ -21,7 +21,7 @@ The Creation phase begins when an execution context is created but before the co
 We can think of the Creation phase as a form of a template. At the Creation phase, a template is created, and at the Execution phase, the template is filled with relevant information. What is this template? During the Creation phase the engine scans the code, and every time it comes across a declaration of a variable or a function, it saves the variables without their actual value (except function arguments, where the value is saved). Then at the Execution phase, the engine will run over that template and execute each relevant part. This process repeats itself every time a new execution context is created.
 
 # Global Execution Context
-GEC or Global Execution Context is the default execution context created when the file loads in the browser. Any JS code which does not belong to any function will be present in the global execution context. As the JS engine is single-threaded, there can't be more than one GEC, because only one global environment is possible for JS code execution.
+GEC or Global Execution Context is the default execution context created when the file loads in the browser. Any JS code which does not belong to any function will be present in the global execution context. **As the JS engine is single-threaded, there can't be more than one GEC, because only one global environment is possible for JS code execution.**
 
 When the JavaScript engine starts executing a JavaScript file (that is as the javascript engine starts to read our code) it creates an execution context even if there is no code to execute in the JavaScript file.
 
