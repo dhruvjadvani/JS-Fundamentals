@@ -15,6 +15,7 @@ To understand the internal workings of the Global Execution context it's importa
 
 - The Creation Phase
 - The Execution Phase
+
 The Creation phase begins when an execution context is created but before the code runs. For example, a function call. When you call a function, you might think the code immediately runs it, but, in reality, the Creation phase starts but the code doesn’t actually execute it.
 
 We can think of the Creation phase as a form of a template. At the Creation phase, a template is created, and at the Execution phase, the template is filled with relevant information. What is this template? During the Creation phase the engine scans the code, and every time it comes across a declaration of a variable or a function, it saves the variables without their actual value (except function arguments, where the value is saved). Then at the Execution phase, the engine will run over that template and execute each relevant part. This process repeats itself every time a new execution context is created.
