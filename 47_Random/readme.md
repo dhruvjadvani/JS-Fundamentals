@@ -58,4 +58,115 @@ console.log(getRandomElement(songs)); // Imagine
 console.log(getRandomElement(songs)); // Stairway to Heaven
 ```
 
+Sub TranslateMessagesToEnglish()
+    Dim ws As Worksheet
+    Dim lastRow As Long
+    Dim i As Long
+    Dim originalText As String
+    Dim translatedText As String
+    
+    ' Set the worksheet (change to your specific worksheet if needed)
+    Set ws = ActiveSheet
+    
+    ' Find the last row with data in the messages column (assuming column A)
+    lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
+    
+    ' Add a new column for translations
+    ws.Columns("B").Insert Shift:=xlToRight
+    ws.Cells(1, 2).Value = "Translated Messages"
+    
+    ' Loop through each row and translate
+    For i = 2 To lastRow ' Assuming first row is header
+        ' Get the original text and convert to string
+        originalText = CStr(ws.Cells(i, 1).Value)
+        
+        ' Skip empty or non-text cells
+        If Trim(originalText) <> "" Then
+            ' Translate the entire cell content
+            translatedText = TranslateText(originalText)
+            
+            ' Write translated text to the new column
+            ws.Cells(i, 2).Value = translatedText
+        End If
+    Next i
+    
+    MsgBox "Translation completed!", vbInformation
+End Sub
 
+Function TranslateText(textToTranslate As String) As String
+    Dim xmlHttp As Object
+    Dim url As String
+    Dim encodedText As String
+    
+    ' Convert to string and trim
+    textToTranslate = Trim(CStr(textToTranslate))
+    
+    ' Check if text is empty
+    If textToTranslate = "" Then
+        TranslateText = ""
+        Exit Function
+    End If
+    
+    ' URL encode the text
+    encodedText = WorksheetFunction.EncodeURL(textToTranslate)
+    
+    ' Prepare the URL for Google Translate
+    url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=" & encodedText
+    
+    ' Create HTTP request object
+    Set xmlHttp = CreateObject("MSXML2.ServerXMLHTTP")
+    
+    ' Open connection
+    xmlHttp.Open "GET", url, False
+    xmlHttp.send
+    
+    ' Check if request was successful
+    If xmlHttp.Status = 200 Then
+        ' Parse the JSON response
+        Dim response As String
+        response = xmlHttp.responseText
+        
+        ' More robust parsing of translation
+        Dim startPos As Long
+        Dim endPos As Long
+        Dim translatedPart As String
+        Dim fullTranslation As String
+        
+        ' Extract multiple translation parts
+        Do
+            startPos = InStr(startPos + 1, response, """")
+            If startPos = 0 Then Exit Do
+            
+            endPos = InStr(startPos + 1, response, """")
+            If endPos = 0 Then Exit Do
+            
+            translatedPart = Mid(response, startPos + 1, endPos - startPos - 1)
+            
+            ' Only add non-empty parts
+            If Trim(translatedPart) <> "" Then
+                fullTranslation = fullTranslation & translatedPart & " "
+            End If
+            
+            startPos = endPos
+        Loop
+        
+        ' Trim and return the full translation
+        TranslateText = Trim(fullTranslation)
+    Else
+        ' Handle error
+        TranslateText = "Translation failed"
+    End If
+    
+    ' Clean up
+    Set xmlHttp = Nothing
+End Function
+
+' Optional: Add a button to run the macro
+Sub AddTranslateButton()
+    Dim ws As Worksheet
+    Set ws = ActiveSheet
+    
+    ' Add a button to run the translation macro
+    ws.Buttons.Add(100, 10, 100, 20).OnAction = "TranslateMessagesToEnglish"
+    ws.Buttons(ws.Buttons.Count).Text = "Translate Messages"
+End Sub
